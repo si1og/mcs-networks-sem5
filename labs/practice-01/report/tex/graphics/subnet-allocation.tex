@@ -1,0 +1,48 @@
+\begin{tikzpicture}[
+	every node/.style={font=\small},
+	subnet/.style={draw=black, line width=0.6pt, minimum width=11cm, inner sep=0pt},
+	boundary/.style={font=\small\ttfamily, anchor=west}
+]
+	\node[subnet, fill=blue!10, minimum height=6.4cm, anchor=north west,
+		align=center] (n1) at (0,0) {%
+		\textbf{Подсеть 1}\\[0.3em]
+		Адрес: {\ttfamily 194.3.192.0}\\
+		Маска: {\ttfamily 255.255.255.128}
+	};
+
+	\node[subnet, fill=green!10, minimum height=1.6cm, anchor=north west,
+		align=center, font=\scriptsize] (n2) at (0,-6.4) {%
+		\textbf{Подсеть 2}\\
+		Адрес: {\ttfamily 194.3.192.128}\\
+		Маска: {\ttfamily 255.255.255.224}
+	};
+	\node[subnet, fill=blue!10, minimum height=1.6cm, anchor=north west,
+		align=center, font=\scriptsize] (n3) at (0,-8.0) {%
+		\textbf{Подсеть 3}\\
+		Адрес: {\ttfamily 194.3.192.160}\\
+		Маска: {\ttfamily 255.255.255.224}
+	};
+	\node[subnet, fill=green!10, minimum height=1.6cm, anchor=north west,
+		align=center, font=\scriptsize] (n4) at (0,-9.6) {%
+		\textbf{Подсеть 4}\\
+		Адрес: {\ttfamily 194.3.192.192}\\
+		Маска: {\ttfamily 255.255.255.224}
+	};
+	\node[subnet, fill=blue!10, minimum height=1.6cm, anchor=north west,
+		align=center, font=\scriptsize] (n5) at (0,-11.2) {%
+		\textbf{Подсеть 5}\\
+		Адрес: {\ttfamily 194.3.192.224}\\
+		Маска: {\ttfamily 255.255.255.224}
+	};
+
+	\node[boundary, anchor=north west] at (11.25,0) {194.3.192.0};
+	\node[boundary, anchor=south west] at (11.25,-6.4) {194.3.192.127};
+	\node[boundary, anchor=north west] at (11.25,-6.4) {194.3.192.128};
+	\node[boundary, anchor=south west] at (11.25,-8.0) {194.3.192.159};
+	\node[boundary, anchor=north west] at (11.25,-8.0) {194.3.192.160};
+	\node[boundary, anchor=south west] at (11.25,-9.6) {194.3.192.191};
+	\node[boundary, anchor=north west] at (11.25,-9.6) {194.3.192.192};
+	\node[boundary, anchor=south west] at (11.25,-11.2) {194.3.192.223};
+	\node[boundary, anchor=north west] at (11.25,-11.2) {194.3.192.224};
+	\node[boundary, anchor=south west] at (11.25,-12.8) {194.3.192.255};
+\end{tikzpicture}
